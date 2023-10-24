@@ -1,0 +1,23 @@
+/* setting up headings */
+article{
+   
+    position: relative;
+}
+ h2.projectHeading {
+    position: absolute;
+    top: -6px;
+    left: 30px;
+}
+ 
+ .anc{
+     margin-bottom: -7px ;
+} 
+ 
+/* h2.tren{
+   position: absolute; 
+   top: 695px;
+   right: 83px;
+} */
+article div .card{
+    border-radius: 8px;
+}
