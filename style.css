@@ -4,9 +4,11 @@ article{
     position: relative;
 }
  h2.projectHeading {
+     color: rgb(0, 0, 0);
     position: absolute;
-    top: -6px;
+    top: -26px;
     left: 30px;
+
 }
  
  .anc{
