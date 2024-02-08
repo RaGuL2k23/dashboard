@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../USER/repos/normalize.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <container>
+    <div class="container">
         <header>
             <text>
                 <input placeholder="search" type="search" name="" id=""> </input>
@@ -46,10 +46,10 @@
                 <p><img src="security.svg" alt="">privacy</p>
             </div>
         </aside>
-        <article>
+        <main>
             
-            <projects>
-                  <h2 class="projectHeading">projects</h2>              
+            <div class="projects">  
+                 <h2 class="projectHeading">projects</h2>              
                 <div class="card">
                     <div class="content">
                         <h1>project1</h1>
@@ -98,21 +98,21 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisulla iste cumque ea adipisci quos!</p>
                     </div>
                      <div class="icon"><img src="eye-plus-outline.svg" alt=""><img src="source-fork.svg" alt=""><img src="star-plus-outline.svg" alt=""></div>
-                </div>
-            </projects>
+                </div> 
+             </div>
             
             <div>
                 <h2 class="anc">Announcements</h2><br>
-                <announcements>
-                    <div class="card">anounc lorem</div>
+                <div class="announcements">
+                    <!-- <div class="card">anounc lorem</div> -->
                     <div class="card">lorem</div>
                     <div class="card">loremd</div>
-                </announcements>
+                </div>
             </div>
             
             <div>
                 <h2 class="tren">Trending</h2>
-                <trending>
+                <div class="trending">
                     <div class="card">
                         <span><img src="4-01.jpg" alt=""></span>
                         <div>
@@ -141,10 +141,10 @@
                             <p class="msg">sdfsdggggdsfg</p>
                         </div>
                     </div>
-                </trending>
+                </div>
             </div>
-        </article>
-    </container>
+        </main>
+    </div>
 </body>
 </html>
 
@@ -176,11 +176,8 @@ header{
 padding: 4px;
 background-color: var(--header-bgcolor);
 }
-container{
-    display: block; 
-background-color: var(--container-bgcolor);
-}
-projects {
+ 
+.projects {
  
     & > .card{
 /* width: var(--project-card-width); */
@@ -191,22 +188,22 @@ border-radius: var(--card-radius);
 background-color: var(--card-bgcolor);
 }
 }
-announcements{
+.announcements{
 display: flex;
 flex-direction: column;
-gap:10px;
-width: fit-content;
-grid-area: 1/2/2/3;
-box-shadow: var(--other-card-shadow);
+gap:10px;align-items: center;
+width: 250px;
+ 
     &>.card{
        background-color: var(--card-bgcolor);
-       width: 170px;
+        width: 200px;
        height: 70px;
-       box-shadow: 0px 2px 0px gray;
+       box-shadow: 2px 2px 1px gray;
+       display: flex;justify-content: center;
+       align-items: center;
     }
 }
-trending{
-display: block;
+.trending{ 
 width: fit-content; 
 box-shadow: var(--other-card-shadow);
 &>.card{
@@ -252,21 +249,22 @@ header [src*=".jpg"]{
 
     
    /*layout designing*/
-   container{
+   .container{
     display:grid;
     grid-template-columns: 1fr 4fr;
+    height: 100vh;
    }
    header{
     border: 2px solid hotpink;
     
    }
-   article{ 
+   main{ 
     align-items: center;
     padding: 20px 0 0 20px;
     display: grid;
     grid-template-columns: 2fr 1fr; 
     grid-gap:35px;
-    & projects{
+    & .projects{
         grid-row: 1/3;
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -325,14 +323,15 @@ header [src*=".jpg"]{
     display: grid;
      grid-template-rows: 80px 270px 150px; 
     & p{
+        max-width: 82px;
         width: max(60px,50%);
         display: flex;
         justify-content: space-between;gap:9px;
     }
    }
    
-   article{
-    & projects > .card{
+   main{
+    & .projects > .card{
         padding: 20px;
         justify-content: space-between;
         flex-direction: column;

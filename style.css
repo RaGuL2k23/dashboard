@@ -1,6 +1,6 @@
 /* setting up headings */
-article{
-   
+main{
+   width: fit-content;
     position: relative;
 }
  h2.projectHeading {
@@ -20,6 +20,14 @@ article{
    top: 695px;
    right: 83px;
 } */
-article div .card{
+main div .card{
     border-radius: 8px;
+}
+main div{
+    display: block;
+    width: fit-content;
+}
+.projectHeading{
+    top: -27px;
+    left: 1488px;
 }
